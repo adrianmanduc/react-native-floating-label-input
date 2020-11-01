@@ -247,6 +247,9 @@ const FloatingLabelInput: React.ForwardRefRenderFunction<InputRef, Props> = (
       setIsFocused(false);
     }
     setSelection({} as { start: number; end: number });
+    if(props.onBlur) {
+      props.onBlur();
+    }
   }
 
   function setFocus() {
